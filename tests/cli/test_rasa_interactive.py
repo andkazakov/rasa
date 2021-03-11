@@ -86,7 +86,7 @@ def test_train_called_when_no_model_passed(
             "--config",
             stack_config_path,
             "--data",
-            "examples/moodbot/data",
+            "examples/moodbot/data", # TODO: JUZL:
         ]
     )
     interactive._set_not_required_args(args)
@@ -116,9 +116,9 @@ def test_train_core_called_when_no_model_passed_and_core(
             "--config",
             stack_config_path,
             "--stories",
-            "examples/moodbot/data/stories.yml",
+            "examples/moodbot/data/stories.yml", # TODO: JUZL:
             "--domain",
-            "examples/moodbot/domain.yml",
+            "examples/moodbot/domain.yml", # TODO: JUZL:
         ]
     )
     interactive._set_not_required_args(args)

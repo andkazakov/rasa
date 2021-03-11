@@ -7,6 +7,7 @@ from rasa.cli import scaffold
 from rasa.shared.importers.importer import TrainingDataImporter
 
 
+# TODO: JUZL:
 @pytest.mark.parametrize(
     "config_file, domain_file, data_folder",
     [
@@ -26,9 +27,9 @@ from rasa.shared.importers.importer import TrainingDataImporter
             "examples/knowledgebasebot/data",
         ),
         (
-            "examples/moodbot/config.yml",
-            "examples/moodbot/domain.yml",
-            "examples/moodbot/data",
+            "examples/moodbot/config.yml", # TODO: JUZL:
+            "examples/moodbot/domain.yml", # TODO: JUZL:
+            "examples/moodbot/data", # TODO: JUZL:
         ),
         (
             "examples/reminderbot/config.yml",
