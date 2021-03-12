@@ -27,9 +27,9 @@ from rasa.shared.importers.importer import TrainingDataImporter
             "examples/knowledgebasebot/data",
         ),
         (
-            "examples/moodbot/config.yml", # TODO: JUZL:
-            "examples/moodbot/domain.yml", # TODO: JUZL:
-            "examples/moodbot/data", # TODO: JUZL:
+            "data/test_moodbot/config.yml", # TODO: JUZL:
+            "data/test_moodbot/domain.yml", # TODO: JUZL:
+            "data/test_moodbot/data", # TODO: JUZL:
         ),
         (
             "examples/reminderbot/config.yml",

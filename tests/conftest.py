@@ -82,7 +82,7 @@ EXAMPLE_DOMAINS = [
     "data/test_domains/default_with_mapping.yml",
     "data/test_domains/default_with_slots.yml",
     "examples/formbot/domain.yml",
-    "examples/moodbot/domain.yml",
+    "data/test_moodbot/domain.yml",
 ]
 
 
@@ -93,7 +93,7 @@ def data_path() -> Text:
 
 @pytest.fixture(scope="session")
 def nlu_data_path() -> Text:
-    return "examples/moodbot/data/nlu.yml"
+    return "data/test_moodbot/data/nlu.yml"
 
 
 @pytest.fixture(scope="session")
@@ -211,18 +211,18 @@ async def default_agent(_trained_default_agent: Agent) -> Agent:
 @pytest.fixture(scope="session")
 async def trained_moodbot_path(trained_async: Callable) -> Text:  # TODO: JUZL:
     return await trained_async(
-        domain="examples/moodbot/domain.yml",
-        config="examples/moodbot/config.yml",
-        training_files="examples/moodbot/data/",
+        domain="data/test_moodbot/domain.yml",
+        config="data/test_moodbot/config.yml",
+        training_files="data/test_moodbot/data/",
     )
 
 
 @pytest.fixture(scope="session")
 async def trained_nlu_moodbot_path(trained_nlu_async: Callable) -> Text:  # TODO: JUZL:
     return await trained_nlu_async(
-        domain="examples/moodbot/domain.yml",
-        config="examples/moodbot/config.yml",
-        nlu_data="examples/moodbot/data/nlu.yml",
+        domain="data/test_moodbot/domain.yml",
+        config="data/test_moodbot/config.yml",
+        nlu_data="data/test_moodbot/data/nlu.yml",
     )
 
 
